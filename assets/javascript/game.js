@@ -42,9 +42,8 @@ window.onload = function(){
     console.log(computerChoice);
     console.log(currentword);
 
-    //Add the current word to page
-    document.querySelector("#currentWord").innerHTML= currentword
-    console.log("Game Start")
+    
+   
 
     //The game run while losses are still allowed
     // while(losses<13){
@@ -52,15 +51,32 @@ window.onload = function(){
         // Need to Press to guess
         document.onkeyup = function(event){
 
+            //Add the current word to page
+            document.querySelector("#currentWord").innerHTML= currentword
+            console.log("Game Start")
+
             var playerGuess= event.key;
         
             //check to see if player has guessed a correct letter
             if(computerChoice.includes(playerGuess)){
                 console.log(playerGuess);
                 //grab the index of playerGuess
+                /Then if I want to insert the letter, 
+                 //I need to find the index of the guessed letter in person and to do that
+                 //I can use the .indexOf with if statement saying if letter in person to return the index of letter 
                 var x = computerChoice.indexOf(playerGuess,0);
                 console.log(x);
-                document.querySelector("#currentWord").innerHTML = currentword(x+2)
+
+                
+                // document.querySelector("#currentWord").innerHTML = currentword(x+2)
+                //I need to match the index of letter from person with the proper index of currentword. So to do that
+                 //convert the currentword/aka"underscore return" to the proper amount of spaces
+                //So that my person.length is equal to currentword.length
+                conputerchoice.
+
+
+
+
                 //I need to match X with the proper index of currentword. So to do that
                 //convert the currentword/aka"underscore return" to the proper amount of spaces
                 //So that my computerChoice.length is equal to currentword.length
@@ -90,13 +106,8 @@ window.onload = function(){
                 // unless person[i] ===person[0]
                 // then enter person.charAt(person[i]) = currentword.charAt(0)
 
-    //Then if I want to insert the letter, 
-    //I need to find the index of the guessed letter in person and to do that
-    //I can use the .indexOf with if statement saying if letter in person to return the index of letter 
-    //I need to match the index of letter from person with the proper index of currentword. So to do that
-    //convert the currentword/aka"underscore return" to the proper amount of spaces
-    //So that my person.length is equal to currentword.length
-
+    /
+    
     
 
     //This is an array to use to 
