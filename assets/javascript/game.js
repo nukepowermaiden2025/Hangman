@@ -56,6 +56,7 @@ document.onkeyup = function(event){
     for(i=0; i<computerChoice.length; i++){
         if(computerChoice.includes(playerGuess)){
             console.log(playerGuess);
+            
             //grab the index of playerGuess
             //Then if I want to insert the letter, 
                 //I need to find the index of the guessed letter in person and to do that
@@ -63,9 +64,7 @@ document.onkeyup = function(event){
             var x = computerChoice.indexOf(playerGuess,0);
             //I need to match the index of letter in computerchoice with the proper index of currentword. 
             //var currentword = playerGuess;
-
-
-            console.log(x);
+            document.querySelector("#currentWord").innerHTML= currentword.splice(x,1,playerGuess)
 
         }else{
             console.log("nope");
